@@ -25,6 +25,7 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
                ListTile(
                  title: Text('Row'),
                  leading: Icon(Icons.list),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context)=> new RowPage())),
                ),
                ListTile(
                  title: Text('Column'),
