@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-// import 'package:rowflutter/index.dart';
+import 'RowPage_page.dart';
+import 'ColumnPage_page.dart';
+import 'RowAndColumn_page.dart';
 
 class MenuUtamaPage extends StatefulWidget {
   MenuUtamaPage({Key key}) : super(key: key);
@@ -30,10 +32,12 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
                ListTile(
                  title: Text('Column'),
                  leading: Icon(Icons.person),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new ColumnPage())),
                ), 
                ListTile(
                  title: Text('Row And Column'),
                  leading: Icon(Icons.star),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new RowAndColumnPage())),
                )
              ],
            ),

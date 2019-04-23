@@ -9,7 +9,16 @@ class RowPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Row Page'),
         backgroundColor: Colors.orange,
-        
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            new Icon(Icons.home, size: 100.0,), 
+            new Icon(Icons.person, size: 100.0,), 
+            new Icon(Icons.apps, size: 100.0,)
+          ],
+        ),
       ),
     );
   }
