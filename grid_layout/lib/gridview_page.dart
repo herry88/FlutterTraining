@@ -31,8 +31,8 @@ class MyGridView {
         getStructuredGridCell("Twitter", "social/twitter.png"),
         getStructuredGridCell("Instagram", "social/instagram.png"),
         getStructuredGridCell("Linkedin", "social/linkendin.png"),
-        getStructuredGridCell("Gooogle Plus", "social/google_plus.png"),
-        getStructuredGridCell("Launcher Icon", "ic_launcher.png"),
+        // getStructuredGridCell("Gooogle Plus", "social/google_plus.png"),
+        // getStructuredGridCell("Launcher Icon", "ic_launcher.png"),
       ],
     );
   }
