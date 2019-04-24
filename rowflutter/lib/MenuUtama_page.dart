@@ -5,10 +5,11 @@ import 'RowAndColumn_page.dart';
 import 'ImageGallery_page.dart';
 import 'ListStatis_page.dart';
 import 'LayoutPage_page.dart';
+import 'ListsDinamisPage_page.dart';
 
 class MenuUtamaPage extends StatefulWidget {
   MenuUtamaPage({Key key}) : super(key: key);
-
+  
   _MenuUtamaPageState createState() => _MenuUtamaPageState();
 }
 
@@ -16,6 +17,7 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
        home: Scaffold(
          appBar: AppBar(
             title: Text("Menu Utama"), 
@@ -52,10 +54,15 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
                  leading: Icon(Icons.art_track),
                  onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new ListStatisPage())),
                ), 
+               ListTile(
+                 title: Text('List Dinamis'),
+                 leading: Icon(Icons.list),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new ListsDinamisPagePage())),
+               ),
                 ListTile(
                  title: Text('Layout'),
-                 leading: Icon(Icons.art_track),
-                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new LayoutPagePage())),
+                 leading: Icon(Icons.looks_one),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new MyApp())),
                )
              ],
            ),
