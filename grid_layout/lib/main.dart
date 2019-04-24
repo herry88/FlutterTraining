@@ -1,49 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:grid_layout/gridview_page.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    final appTitle = 'Orientation Demo';
-
-    return MaterialApp(
-      title: appTitle,
-      home: OrientationList(
-        title: appTitle,
-      ),
-    );
-  }
-}
-
-class OrientationList extends StatelessWidget {
-  final String title;
-
-  OrientationList({Key key, this.title}) : super(key: key);
+  final MyGridView myGridView = new MyGridView();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: OrientationBuilder(
-        builder: (context, orientation) {
-          return GridView.count(
-            // Create a grid with 2 columns in portrait mode, or 3 columns in
-            // landscape mode.
-            crossAxisCount: orientation == Orientation.portrait ? 2 : 3,
-            // Generate 100 Widgets that display their index in the List
-            children: List.generate(20, (index) {
-              return Center(
-                child: Text(
-                  'Item $index',
-                  style: Theme.of(context).textTheme.headline,
-                ),
-              );
-            }),
-          );
-        },
+    return new MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: new Scaffold(
+        appBar: new AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: new Text("GridView Example"),
+        ),
+        body: myGridView.build(),
       ),
     );
   }
