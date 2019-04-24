@@ -17,6 +17,7 @@ class LayoutPagePage extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.person),
             title: Text('Mail'),
+           
           ),
           ListTile(
             leading: Icon(Icons.map),
