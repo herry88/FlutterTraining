@@ -71,6 +71,7 @@ class MyApp extends StatelessWidget {
             'lake, which warms to 20 degrees Celsius in the summer. Activities '
             'enjoyed here include rowing, and riding the summer toboggan run.',
         softWrap: true,
+        textAlign: TextAlign.justify,
       ),
     );
 
@@ -110,6 +111,7 @@ class MyApp extends StatelessWidget {
             label,
             style: TextStyle(
               fontSize: 12,
+              
               fontWeight: FontWeight.w400,
               color: color,
             ),
