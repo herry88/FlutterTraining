@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'RowPage_page.dart';
 import 'ColumnPage_page.dart';
 import 'RowAndColumn_page.dart';
+import 'ImageGallery_page.dart';
+import 'ListStatis_page.dart';
+import 'LayoutPage_page.dart';
 
 class MenuUtamaPage extends StatefulWidget {
   MenuUtamaPage({Key key}) : super(key: key);
@@ -15,7 +18,7 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
     return MaterialApp(
        home: Scaffold(
          appBar: AppBar(
-            title: Text("Menu Utama"),
+            title: Text("Menu Utama"), 
          ),
          body: new Center(
            
@@ -38,6 +41,21 @@ class _MenuUtamaPageState extends State<MenuUtamaPage> {
                  title: Text('Row And Column'),
                  leading: Icon(Icons.star),
                  onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new RowAndColumnPage())),
+               ), 
+               ListTile(
+                 title: Text('Image Gallery'),
+                 leading: Icon(Icons.art_track),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new ImageGalleryPage())),
+               ),
+               ListTile(
+                 title: Text('List Statis'),
+                 leading: Icon(Icons.art_track),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new ListStatisPage())),
+               ), 
+                ListTile(
+                 title: Text('Layout'),
+                 leading: Icon(Icons.art_track),
+                 onTap: ()=>Navigator.of(context).push(MaterialPageRoute(builder:(BuildContext context)=> new LayoutPagePage())),
                )
              ],
            ),
