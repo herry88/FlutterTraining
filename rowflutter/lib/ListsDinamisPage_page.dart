@@ -75,10 +75,13 @@ class DetailScreen extends StatelessWidget {
             style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             textAlign: TextAlign.justify,
           ),
-          new Text(
+         Padding(
+           padding: const EdgeInsets.all(8.0),
+           child:  new Text(
             todo.detail,
-            textAlign: TextAlign.justify,
-          )
+            textAlign: TextAlign.center,
+          ),
+         ),
         ],
       ),
     );
