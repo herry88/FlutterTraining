@@ -12,7 +12,7 @@ class _YoutubeMainPageState extends State<YoutubeMainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Youtube UI"),
+        title : Image.asset('images/youtube_logo.png'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.videocam),
