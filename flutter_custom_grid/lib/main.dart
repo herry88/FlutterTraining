@@ -36,15 +36,27 @@ class _FlutterCustomGridState extends State<FlutterCustomGrid> {
       daftarbuah.add(new Container(
         child: new Column(
           children: <Widget>[
-            new Hero(
-              tag: datanya['nama'],
-              child: new Image.asset('gambar/$gambar',
-                  height: 100.0, width: 100.0, fit: BoxFit.cover),
+            Card(
+              child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: InkWell(
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) =>
+                            DetailGrid(nama: datanya['nama'], gambar: gambar)));
+                  },
+                  child: new Hero(
+                    tag: datanya['nama'],
+                    child: new Image.asset('gambar/$gambar',
+                        height: 100.0, width: 100.0, fit: BoxFit.cover),
+                  ),
+                ),
+              ),
             ),
             new Text(
               datanya['nama'],
               style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
-            )
+            ),
           ],
         ),
       ));
