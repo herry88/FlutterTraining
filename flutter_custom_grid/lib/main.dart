@@ -84,3 +84,42 @@ class _FlutterCustomGridState extends State<FlutterCustomGrid> {
     );
   }
 }
+
+class DetailGrid extends StatelessWidget {
+  final String nama, gambar;
+  DetailGrid({this.nama, this.gambar});
+  // const DetailGrid({Key key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(nama),
+        backgroundColor: Colors.orange,
+      ),
+      body: ListView(
+        children: <Widget>[
+          new Container(
+            height: 240.0,
+            child: Hero(
+              tag: nama,
+              child: Material(
+                child: InkWell(
+                  child: Image.asset(
+                    'gambar/$gambar',
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          
+          new BagianNama(
+            nama: nama,
+          ),
+          new BagianIcon(), 
+          new BagianKeterangan(),
+        ],
+      ),
+    );
+  }
+}
