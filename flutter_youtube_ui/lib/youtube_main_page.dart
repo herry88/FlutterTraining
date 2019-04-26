@@ -13,6 +13,7 @@ class _YoutubeMainPageState extends State<YoutubeMainPage> {
     return Scaffold(
       appBar: AppBar(
         title : Image.asset('images/youtube_logo.png'),
+        backgroundColor: Colors.red,
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.videocam),
