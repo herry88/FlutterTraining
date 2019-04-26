@@ -54,25 +54,43 @@ class ItemList extends StatelessWidget {
       itemCount: list == null ? 0 : list.length,
       itemBuilder: (context, i) {
         return new Container(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(2.0),
           child: new GestureDetector(
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
                 builder: (BuildContext context) =>
                     new Detail(list: list, index: i))),
             child: new Card(
-              child: new ListTile(
-                title: new Text(
-                  list[i]['judul_berita'],
-                  style: new TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.green),
-                ),
-                subtitle: new Text("Tanggal : ${list[i]['tgl_berita']}"),
-                trailing: new Image.network(
-                  'http://172.10.2.9/berita/images/' + list[i]['gambar_berita'],
-                  fit: BoxFit.cover,
-                  height: 60.0,
-                  width: 60.0,
-                ),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: new Image.network(
+                      'http://172.10.2.9/berita/images/' +
+                          list[i]['gambar_berita'],
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  new Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: new Text(
+                          list[i]['judul_berita'],
+                          style: new TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.green),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: new Text(
+                          "Tanggal : ${list[i]['tgl_berita']}",
+                          textAlign: TextAlign.left,
+                        ),
+                      ),
+                    ],
+                  )
+                ],
               ),
             ),
           ),
